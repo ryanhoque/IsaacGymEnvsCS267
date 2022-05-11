@@ -1,12 +1,8 @@
-# Isaac Gym Benchmark Environments
-
-[Website](https://developer.nvidia.com/isaac-gym) | [Technical Paper](https://arxiv.org/abs/2108.10470) | [Videos](https://sites.google.com/view/isaacgym-nvidia)
-
+# Optimizing Isaac Gym - CS 267 Spring 2022
 
 ### About this repository
 
-This repository contains example RL environments for the NVIDIA Isaac Gym high performance environments described [in our NeurIPS 2021 Datasets and Benchmarks paper](https://openreview.net/forum?id=fgFBtYgJQX_)
-
+This repository is a clone of [NVIDIA's IsaacGymEnvs repository](https://github.com/NVIDIA-Omniverse/IsaacGymEnvs). The main changes are implemented in the `myextension/` folder which we have implemented several CUDA kernels to replace and speed up the reward calculation in the FrankaCabinet and Cartpole environments. NVIDIA's README follows...
 
 ### Installation
 
@@ -23,10 +19,6 @@ Once Isaac Gym is installed and samples work within your current python environm
 ```bash
 pip install -e .
 ```
-
-### Custom Reward CUDA Kernel
-
-Go to myextension/ folder and run `python setup.py install` to get CUDA reward kernels for FrankaCabinet and Cartpole
 
 ### Running the benchmarks
 
